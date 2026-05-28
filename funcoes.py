@@ -12,4 +12,4 @@ def cadastrar_usuario():
     }
 
     usuarios.append(usuario)
-    print("Usuário cadastrado com sucesso!")
+    print(f"Usuário cadastrado com sucesso! Bem-vindo, {nome}!")
