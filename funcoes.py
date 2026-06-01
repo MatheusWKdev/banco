@@ -8,7 +8,8 @@ def cadastrar_usuario():
     usuario = {
         "nome": nome,
         "email": email,
-        "senha": senha
+        "senha": senha,
+        "saldo": 0
     }
 
     usuarios.append(usuario)
@@ -19,8 +20,9 @@ def logar_usuario():
     while True:
         email = input("Digite seu email: ")
         encontrado = False
-        senha_correta = False
+
         for usuario in usuarios:
+
             if email == usuario["email"]:
                 print("Email encotrado!")
                 encontrado = True
@@ -29,8 +31,7 @@ def logar_usuario():
                     print("Senha incorreta! Tente novamente ")
                 elif senha == usuario["senha"]:
                     print("Conta logada com sucesso! ")
-                    senha_correta = True
-        if senha_correta == True:
-            break
-        elif encontrado == False:
+                    return usuario
+
+        if encontrado == False:
             print("Email não encontrado! ")
