@@ -45,3 +45,6 @@ def menu_conta(usuario_logado):
             elif saque <= usuario_logado['saldo']:
                 usuario_logado['saldo'] -= saque
                 print(f"Saque realizado com sucesso! Seu saldo agora é de: R${usuario_logado['saldo']}")
+        elif escolha_usuario == 4:
+            print("Saindo do menu da conta. Até mais!")
+            break
